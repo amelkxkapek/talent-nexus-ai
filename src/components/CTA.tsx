@@ -2,8 +2,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useSubscription } from '@/hooks/use-subscription';
 
 const CTA = () => {
+  const { status, subscribeNow } = useSubscription();
+  
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -14,19 +17,37 @@ const CTA = () => {
           
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Tech Recruitment?
+              {status === 'subscribed' ? 
+                "Thank You for Being a Premium Member!" : 
+                "Ready to Transform Your Tech Recruitment?"}
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-xl mx-auto">
-              Join forward-thinking recruiters who are leveraging AI to find the perfect match between talent and opportunities.
+              {status === 'subscribed' ? 
+                "Enjoy unlimited access to all ChainMatcher features and maximize your recruitment potential." : 
+                "Join forward-thinking recruiters who are leveraging AI to find the perfect match between talent and opportunities."
+              }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-talent-purple hover:bg-gray-100 px-8 py-6" size="lg">
-                Get Started Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6" size="lg">
-                Schedule Demo
-              </Button>
+              {status === 'subscribed' ? (
+                <Button className="bg-white text-talent-purple hover:bg-gray-100 px-8 py-6" size="lg">
+                  Explore Features
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              ) : (
+                <>
+                  <Button 
+                    className="bg-white text-talent-purple hover:bg-gray-100 px-8 py-6" 
+                    size="lg"
+                    onClick={subscribeNow}
+                  >
+                    Subscribe for €40/month
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6" size="lg">
+                    Schedule Demo
+                  </Button>
+                </>
+              )}
             </div>
           </div>
         </div>

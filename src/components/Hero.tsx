@@ -2,8 +2,16 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, FileText, Users, BarChart } from 'lucide-react';
+import { useSubscription } from '@/hooks/use-subscription';
 
 const Hero = () => {
+  const { useFreeTrial, status } = useSubscription();
+
+  const handleUploadClick = () => {
+    useFreeTrial();
+    // Additional logic for CV upload would go here
+  };
+
   return (
     <section className="relative w-full pt-32 pb-20 overflow-hidden">
       {/* Background gradient elements */}
@@ -19,11 +27,13 @@ const Hero = () => {
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               Upload CVs and job descriptions to instantly analyze compatibility, generate communication, and manage your recruitment pipeline.
+              {status !== 'subscribed' && " Free users get one match per day."}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 className="bg-gradient-to-r from-talent-teal to-talent-purple text-white px-8 py-6 rounded-lg hover:opacity-90"
                 size="lg"
+                onClick={handleUploadClick}
               >
                 Upload CV
                 <FileText className="ml-2 h-5 w-5" />
@@ -37,6 +47,11 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
+            {status !== 'subscribed' && (
+              <p className="text-sm text-gray-500 mt-4">
+                Free tier: 1 match per day. <span className="text-talent-purple font-medium">Subscribe for €40/month</span> for unlimited access.
+              </p>
+            )}
           </div>
 
           {/* Floating 3D diagram illustration */}
