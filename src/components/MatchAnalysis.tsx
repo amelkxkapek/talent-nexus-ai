@@ -89,10 +89,7 @@ const MatchAnalysis = () => {
                   <span className="font-medium">Overall Match</span>
                   <span className="font-bold text-talent-teal">85%</span>
                 </div>
-                <Progress 
-                  value={85} 
-                  className={cn("h-2 bg-gray-100", "bg-gradient-to-r from-talent-teal to-talent-purple")} 
-                />
+                <Progress value={85} className="h-2 bg-gray-100" />
               </div>
               
               <div className="space-y-4">
@@ -101,10 +98,7 @@ const MatchAnalysis = () => {
                     <span className="font-medium">Technical Skills</span>
                     <span className="font-bold text-talent-teal">90%</span>
                   </div>
-                  <Progress 
-                    value={90} 
-                    className={cn("h-1.5 bg-gray-100")} 
-                  />
+                  <Progress value={90} className="h-1.5 bg-gray-100" />
                   <p className="text-sm text-gray-600 mt-2">Strong match in React, TypeScript, and Node.js requirements</p>
                 </div>
                 
@@ -113,10 +107,7 @@ const MatchAnalysis = () => {
                     <span className="font-medium">Experience Level</span>
                     <span className="font-bold text-talent-purple">80%</span>
                   </div>
-                  <Progress 
-                    value={80} 
-                    className={cn("h-1.5 bg-gray-100")} 
-                  />
+                  <Progress value={80} className="h-1.5 bg-gray-100" />
                   <p className="text-sm text-gray-600 mt-2">5 years experience vs. requested 6+ years</p>
                 </div>
                 
@@ -125,10 +116,7 @@ const MatchAnalysis = () => {
                     <span className="font-medium">Soft Skills</span>
                     <span className="font-bold text-talent-teal">85%</span>
                   </div>
-                  <Progress 
-                    value={85} 
-                    className={cn("h-1.5 bg-gray-100")} 
-                  />
+                  <Progress value={85} className="h-1.5 bg-gray-100" />
                   <p className="text-sm text-gray-600 mt-2">Strong communication and teamwork indicators</p>
                 </div>
               </div>
