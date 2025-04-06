@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Upload, FileText, File } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Upload, FileText, File, DollarSign } from 'lucide-react';
+import { cn } from "@/lib/utils";
 
 const MatchAnalysis = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -118,6 +118,25 @@ const MatchAnalysis = () => {
                   </div>
                   <Progress value={85} className="h-1.5 bg-gray-100" />
                   <p className="text-sm text-gray-600 mt-2">Strong communication and teamwork indicators</p>
+                </div>
+              </div>
+              
+              <div className="p-4 bg-white rounded-lg">
+                <div className="flex items-center mb-2">
+                  <DollarSign className="h-5 w-5 text-green-600 mr-2" />
+                  <span className="font-medium">Rate Recommendations</span>
+                </div>
+                <div className="grid grid-cols-2 gap-4 mt-3">
+                  <div className="p-3 border border-gray-100 rounded-lg">
+                    <p className="text-sm font-medium">Candidate Rate</p>
+                    <p className="text-lg font-bold text-green-600">€55-65/hr</p>
+                    <p className="text-xs text-gray-500">Based on experience and skills</p>
+                  </div>
+                  <div className="p-3 border border-gray-100 rounded-lg">
+                    <p className="text-sm font-medium">Client Charge</p>
+                    <p className="text-lg font-bold text-green-600">€75-85/hr</p>
+                    <p className="text-xs text-gray-500">Recommended billing rate</p>
+                  </div>
                 </div>
               </div>
               

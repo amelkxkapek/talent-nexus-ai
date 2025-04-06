@@ -5,6 +5,9 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import HowItWorks from '@/components/HowItWorks';
 import MatchAnalysis from '@/components/MatchAnalysis';
+import SalaryInsights from '@/components/SalaryInsights';
+import BatchProcessing from '@/components/BatchProcessing';
+import CandidateClientMatch from '@/components/CandidateClientMatch';
 import SubscriptionPlans from '@/components/SubscriptionPlans';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
@@ -20,6 +23,9 @@ const Index = () => {
         <Features />
         <HowItWorks />
         <MatchAnalysis />
+        <BatchProcessing />
+        <SalaryInsights />
+        <CandidateClientMatch />
         <SubscriptionPlans />
         <CTA />
       </main>
