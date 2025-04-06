@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Instagram, Twitter, Linkedin, Github } from 'lucide-react';
 
@@ -11,10 +12,10 @@ const Footer = () => {
               <div className="relative h-10 w-10 mr-2">
                 <div className="absolute inset-0 bg-gradient-to-r from-talent-teal to-talent-purple rounded-full blur-sm"></div>
                 <div className="absolute inset-0.5 bg-talent-dark rounded-full flex items-center justify-center">
-                  <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-talent-teal to-talent-purple">TN</span>
+                  <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-talent-teal to-talent-purple">CM</span>
                 </div>
               </div>
-              <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-talent-teal to-talent-purple">Talent Nexus AI</h2>
+              <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-talent-teal to-talent-purple">ChainMatcher</h2>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               AI-powered platform for matching tech talent with the perfect opportunities. Streamline your recruitment process with intelligent automation.
@@ -58,7 +59,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">© 2025 Talent Nexus AI. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2025 ChainMatcher. All rights reserved.</p>
           <div className="mt-4 md:mt-0">
             <a href="#" className="text-gray-500 hover:text-talent-teal text-sm transition-colors">Privacy Policy</a>
             <span className="text-gray-700 mx-2">•</span>

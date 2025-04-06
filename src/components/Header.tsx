@@ -25,10 +25,10 @@ const Header = () => {
           <div className="relative h-10 w-10 mr-2">
             <div className="absolute inset-0 bg-talent-teal rounded-full blur-sm"></div>
             <div className="absolute inset-0.5 bg-white rounded-full flex items-center justify-center">
-              <span className="text-xl font-bold gradient-text">TN</span>
+              <span className="text-xl font-bold gradient-text">CM</span>
             </div>
           </div>
-          <h1 className="text-xl md:text-2xl font-bold gradient-text">Talent Nexus AI</h1>
+          <h1 className="text-xl md:text-2xl font-bold gradient-text">ChainMatcher</h1>
         </Link>
 
         {isMobile ? (
